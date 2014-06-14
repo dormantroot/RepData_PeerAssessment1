@@ -19,8 +19,6 @@ opts_chunk$set(fig.path='figures/')
 Before proceeding, please make sure that the path is set to the working directory where the file 'activity.csv' exist.
 </p>
 ```{r ,echo=TRUE}
-#setwd("F:/My Development/My Testing Ground/Data Science/Data Science Cert - Code/Reproducible Research/Week 2/Peer Assessment 1/RepData_PeerAssessment1")
-
 # Read the csv file contents
 df = read.table("activity.csv", sep=",", header=TRUE)  
 
@@ -233,7 +231,7 @@ levels(groupedWKData$actDay) = c("weekend","weekday")
 # during every 5 minute interval
 # The base plot
 p = ggplot(groupedWKData, aes(x=interval, y=mean)) + geom_line() +
-    xlab("Activity Date") +
+    xlab("Interval") +
     ylab("Average Number of Steps")
 
 # Faceted by actDay in vertically arranged subpanels

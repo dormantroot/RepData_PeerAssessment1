@@ -14,10 +14,6 @@ Before proceeding, please make sure that the path is set to the working director
 </p>
 
 ```r
-# setwd('F:/My Development/My Testing Ground/Data Science/Data Science Cert
-# - Code/Reproducible Research/Week 2/Peer Assessment
-# 1/RepData_PeerAssessment1')
-
 # Read the csv file contents
 df = read.table("activity.csv", sep = ",", header = TRUE)
 
@@ -339,7 +335,7 @@ levels(groupedWKData$actDay) = c("weekend", "weekday")
 
 # Create a time series plot showing the mean of steps taken across all days
 # during every 5 minute interval The base plot
-p = ggplot(groupedWKData, aes(x = interval, y = mean)) + geom_line() + xlab("Activity Date") + 
+p = ggplot(groupedWKData, aes(x = interval, y = mean)) + geom_line() + xlab("Interval") + 
     ylab("Average Number of Steps")
 
 # Faceted by actDay in vertically arranged subpanels
